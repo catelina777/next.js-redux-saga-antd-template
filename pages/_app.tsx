@@ -7,6 +7,7 @@ import Link from 'next/link';
 import 'antd/dist/antd.css';
 
 Router.events.on('routeChangeStart', () => {
+  NProgress.configure({ showSpinner: false });
   NProgress.start();
 });
 Router.events.on('routeChangeComplete', () => NProgress.done());
